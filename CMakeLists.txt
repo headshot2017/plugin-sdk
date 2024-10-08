@@ -36,19 +36,19 @@ option(BUILD_GTASA "Build GTA San Andreas plugin library" ON)
 
 if(BUILD_GTAIII)
 	add_library(plugin_III STATIC ${SRC_SHARED} ${SRC_PLUGIN_III})
-	target_compile_definitions(plugin_III PRIVATE GTAIII PLUGIN_SGV_10EN _HAS_CXX17)
+	target_compile_definitions(plugin_III PRIVATE GTAIII PLUGIN_SGV_10EN _HAS_CXX17 RW)
 	target_include_directories(plugin_III PRIVATE shared shared/comp shared/extender shared/extensions shared/game plugin_III plugin_III/game_III plugin_III/game_III/meta plugin_III/game_III/rw)
 endif()
 
 if(BUILD_GTAIII)
 	add_library(plugin_vc STATIC ${SRC_SHARED} ${SRC_PLUGIN_VC})
-	target_compile_definitions(plugin_vc PRIVATE GTAVC PLUGIN_SGV_10EN _HAS_CXX17)
+	target_compile_definitions(plugin_vc PRIVATE GTAVC PLUGIN_SGV_10EN _HAS_CXX17 RW)
 	target_include_directories(plugin_vc PRIVATE shared shared/comp shared/extender shared/extensions shared/game plugin_vc plugin_vc/game_vc plugin_vc/game_vc/meta plugin_vc/game_vc/rw)
 endif()
 
 if(BUILD_GTASA)
 	add_library(plugin_sa STATIC ${SRC_SHARED} ${SRC_PLUGIN_SA})
-	target_compile_definitions(plugin_sa PRIVATE GTASA PLUGIN_SGV_10US _HAS_CXX17)
+	target_compile_definitions(plugin_sa PRIVATE GTASA PLUGIN_SGV_10US _HAS_CXX17 RW)
 	target_include_directories(plugin_sa PRIVATE shared shared/comp shared/extender shared/extensions shared/game plugin_sa plugin_sa/game_sa plugin_sa/game_sa/meta plugin_sa/game_sa/rw)
 endif()
 
