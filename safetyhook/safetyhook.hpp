@@ -191,6 +191,7 @@ private:
 #pragma once
 
 #include <algorithm>
+#include <optional>
 #include <cstdint>
 #include <type_traits>
 
